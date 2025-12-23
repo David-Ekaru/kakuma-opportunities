@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kakuma Opportunities</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #0a7cff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      background: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #e6f0ff;
+    }
+    section {
+      display: none;
+      padding: 15px;
+    }
+    section.active {
+      display: block;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 8px;
+      color: #0a7cff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      padding: 10px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Kakuma Opportunities</h2>
+  <p>Jobs • Scholarships • Training • Digital Work</p>
+</header>
+
+<nav>
+  <button onclick="showSection('jobs')">Jobs</button>
+  <button onclick="showSection('scholarships')">Scholarships</button>
+  <button onclick="showSection('training')">Training</button>
+  <button onclick="showSection('digital')">Digital Work</button>
+</nav>
+
+<!-- JOBS -->
+<section id="jobs" class="active">
+  <div class="card">
+    <h3>UNHCR Jobs</h3>
+    <p>Refugee and host community opportunities.</p>
+    <a href="https://www.unhcr.org/careers.html" target="_blank">Visit</a>
+  </div>
+  <div class="card">
+    <h3>BrighterMonday Kenya</h3>
+    <p>Jobs across Kenya.</p>
+    <a href="https://www.brightermonday.co.ke" target="_blank">Visit</a>
+  </div>
+</section>
+
+<!-- SCHOLARSHIPS -->
+<section id="scholarships">
+  <div class="card">
+    <h3>DAFI Scholarship</h3>
+    <p>For refugees pursuing higher education.</p>
+    <a href="https://www.unhcr.org/dafi-scholarship.html" target="_blank">Visit</a>
+  </div>
+  <div class="card">
+    <h3>Mastercard Foundation</h3>
+    <p>Education and leadership programs.</p>
+    <a href="https://mastercardfdn.org" target="_blank">Visit</a>
+  </div>
+</section>
+
+<!-- TRAINING -->
+<section id="training">
+  <div class="card">
+    <h3>Learning Lions</h3>
+    <p>Digital skills training in Kakuma.</p>
+    <a href="https://learninglions.org" target="_blank">Visit</a>
+  </div>
+  <div class="card">
+    <h3>Ajira Digital</h3>
+    <p>Government digital jobs training.</p>
+    <a href="https://ajiradigital.go.ke" target="_blank">Visit</a>
+  </div>
+</section>
+
+<!-- DIGITAL WORK -->
+<section id="digital">
+  <div class="card">
+    <h3>Remotasks</h3>
+    <p>Online tasks and AI work.</p>
+    <a href="https://www.remotasks.com" target="_blank">Visit</a>
+  </div>
+  <div class="card">
+    <h3>ySense</h3>
+    <p>Surveys and online micro-tasks.</p>
+    <a href="https://www.ysense.com" target="_blank">Visit</a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Kakuma Opportunities | Built on Mobile
+</footer>
+
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+</script>
+
+</body>
+</html>
